@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap');
+
+* {
+    --darkest: #161920; /* Used exclusively for text on a light background */
+    --veryDark: #373F51; /* Used as a dark background */
+    --mediumDark: #FE5F55; /* Used for everything else */
+    --mediumLight: #FF8B26; /* Used for emphasised text on any background */
+    --lightest: #EEF0F2; /* Used for light background or text on a dark background */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--darkest);
+    background-color: var(--lightest);
+    font-family: Inter;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Big intro text styling */
+section.hero span.name {
+    color: var(--mediumLight);
+}
+section.hero {
+    color: var(--lightest);
+    background-color: var(--veryDark);
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+section.hero div {
+    margin: 0 20% 0 20%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+section.hero h1 {
+    font-size: 6.5vh;
+    margin: 3vh 0;
+}
+section.hero button {
+    font-size: 2vh;
+    font-family: Inter;
+    border: 2px solid var(--mediumLight);
+    background: none;
+    color: var(--lightest);
+    padding: 1vh 2vh;
+    cursor: pointer;
+    margin: 0 2vh 2vh 0;
+    outline: none;
+    transition: 100ms;
+}
+section.hero button:hover {
+    border: 2px solid var(--mediumLight);
+    background-color: var(--mediumLight);
+    color: var(--darkest);
+}

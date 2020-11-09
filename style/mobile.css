@@ -1,0 +1,5 @@
+@media (orientation: portrait) {
+    section.hero h1 {
+        font-size: 8vw;
+    }
+}
