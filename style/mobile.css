@@ -2,4 +2,12 @@
     section.hero h1 {
         font-size: 8vw;
     }
+    section.regular div:not(.projectsShowcase):not(.project) {
+        margin: 0 15% 0 15%;
+        padding: 5vh 0 5vh;
+    }
+    section.regular img {
+       height: 20vw;
+       margin: 0 3vh 0 0;
+    }
 }

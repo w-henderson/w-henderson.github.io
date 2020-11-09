@@ -3,3 +3,7 @@ function entryScroll() {
     behavior: "smooth"
   });
 }
+
+function openGitHubProject(projectName) {
+  window.open(`https://github.com/w-henderson/${projectName}`);
+}

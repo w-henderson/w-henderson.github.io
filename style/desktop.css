@@ -4,12 +4,13 @@
     --darkest: #161920; /* Used exclusively for text on a light background */
     --veryDark: #373F51; /* Used as a dark background */
     --mediumDark: #FE5F55; /* Used for everything else */
-    --mediumLight: #FF8B26; /* Used for emphasised text on any background */
+    --mediumLight: #FE8B55; /* Used for emphasised text on any background */
+    --almostLightest: #dee1e4;  /* Used for slightly making things stand out */
     --lightest: #EEF0F2; /* Used for light background or text on a dark background */
 }
 
 body {
-    margin: 0;
+    margin: 0 0 0 0;
     padding: 0;
     color: var(--darkest);
     background-color: var(--lightest);
@@ -57,4 +58,70 @@ section.hero button:hover {
     border: 2px solid var(--mediumLight);
     background-color: var(--mediumLight);
     color: var(--darkest);
+}
+
+/* Regular section styling */
+section.regular {
+    background-color: var(--lightest);
+    color: var(--darkest);
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 25%;
+    font-size: 2.5vh;
+    margin-top: 5vh;
+}
+section.regular div:not(.projectsShowcase):not(.project) {
+    margin: 0 20% 0 20%;
+    padding: 10vh 0 0;
+}
+section.regular h1 {
+    font-size: 4vh;
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+section.regular img {
+    float: left;
+    height: 20vh;
+    border-radius: 2vh;
+    margin-right: 5vh;
+}
+
+/* Project showcase styling */
+.projectsShowcase {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.project {
+    flex: 1;
+    background-color: var(--mediumLight);
+    color: var(--veryDark);
+    border-radius: 2vh;
+    margin: 2vh;
+    box-sizing: border-box;
+    padding: 2vh;
+    cursor: pointer;
+    transition: 100ms;
+    min-width: 300px;
+}
+.project:hover {
+    transform: scale(1.1);
+}
+.project:nth-child(odd) {
+    background-color: var(--mediumDark);
+}
+.project span.title {
+    display: block;
+    color: var(--lightest);
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-bottom: 1vh;
+}
+.project span.lang {
+    font-weight: 200;
+    color: var(--lightest);
+}
+.project span.lang::after {
+    content: " \2022"; /* • character unicode */
 }
