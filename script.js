@@ -4,6 +4,6 @@ function entryScroll() {
   });
 }
 
-function openGitHubProject(projectName) {
+function openGitHub(projectName = "") {
   window.open(`https://github.com/w-henderson/${projectName}`);
 }
