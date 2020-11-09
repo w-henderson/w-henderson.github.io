@@ -17,9 +17,10 @@ body {
     font-family: Inter;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+::-webkit-scrollbar { display: none; }
+.scrollShown::-webkit-scrollbar { display: block; background-color: var(--darkest); }
+.scrollShown::-webkit-scrollbar-thumb { background-color: var(--veryDark); }
+.scrollShown::-webkit-scrollbar-thumb:hover { background-color: #55617c; }
 
 /* Big intro text styling */
 section.hero span.name {
@@ -61,7 +62,7 @@ section.hero button:hover {
 }
 hr {
     width: 30vw;
-    height: 0.2vw;
+    height: 0.4vh;
     outline: none;
     border: none;
     background-color: var(--mediumLight);
@@ -111,7 +112,7 @@ section.regular img {
     padding: 2vh;
     cursor: pointer;
     transition: 100ms;
-    min-width: 300px;
+    min-width: 250px;
 }
 .project:hover {
     transform: scale(1.1);
