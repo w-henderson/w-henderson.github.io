@@ -2,7 +2,7 @@
     section.hero h1 {
         font-size: 8vw;
     }
-    section.regular div:not(.projectsShowcase):not(.project) {
+    section.regular div.container {
         margin: 0 15% 0 15%;
         padding: 5vh 0 5vh;
     }
@@ -12,5 +12,8 @@
     }
     .project {
         margin: 2vh 0;
+    }
+    .flexCols {
+        flex-direction: column;
     }
 }
