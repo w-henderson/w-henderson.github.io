@@ -112,7 +112,7 @@ section.regular ul {
 }
 section.regular li::before {
     content: "\2022";
-    color: #55fe66;
+    color: #35db46;
     display: inline-block;
     transform: scale(1.5) translateY(-0.05em);
     width: 1em;
@@ -128,6 +128,7 @@ section.regular ul.orange li::before {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 1vh;
 }
 .project {
     flex: 1;
