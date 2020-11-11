@@ -145,7 +145,10 @@ section.regular ul.orange li::before {
 .project:hover {
     transform: scale(1.1);
 }
-.project:nth-child(odd) {
+.project:nth-child(4n) {
+    background-color: var(--mediumDark);
+}
+.project:nth-child(4n+1) {
     background-color: var(--mediumDark);
 }
 .project span.title {
