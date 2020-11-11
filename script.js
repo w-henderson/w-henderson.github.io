@@ -9,9 +9,5 @@ function openGitHub(projectName = "") {
 }
 
 window.addEventListener('scroll', function (e) {
-  if (window.pageYOffset == 0) {
-    document.body.className = "";
-  } else {
-    document.body.className = "scrollShown";
-  }
+  document.documentElement.dataset.scroll = window.pageYOffset;
 });

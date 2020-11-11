@@ -17,10 +17,10 @@ body {
     font-family: Inter;
 }
 
-::-webkit-scrollbar { display: none; }
-.scrollShown::-webkit-scrollbar { display: block; background-color: var(--darkest); }
-.scrollShown::-webkit-scrollbar-thumb { background-color: var(--veryDark); }
-.scrollShown::-webkit-scrollbar-thumb:hover { background-color: #55617c; }
+::-webkit-scrollbar { background-color: var(--veryDark); }
+html:not([data-scroll='0']) ::-webkit-scrollbar { display: block; background-color: var(--darkest); }
+html:not([data-scroll='0']) ::-webkit-scrollbar-thumb { background-color: var(--veryDark); }
+html:not([data-scroll='0']) ::-webkit-scrollbar-thumb:hover { background-color: #55617c; }
 
 /* Big intro text styling */
 section.hero span.name {
@@ -28,7 +28,8 @@ section.hero span.name {
 }
 section.hero {
     color: var(--lightest);
-    background: linear-gradient(to top right, var(--veryDark), var(--darkest));
+    /*background: linear-gradient(to top right, var(--veryDark), var(--darkest));*/
+    background-color: var(--veryDark);
     box-sizing: border-box;
     height: 100%;
     width: 100%;
@@ -38,6 +39,7 @@ section.hero div {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 3;
 }
 section.hero h1 {
     font-size: 6.5vh;
