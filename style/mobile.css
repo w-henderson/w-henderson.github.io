@@ -19,13 +19,4 @@
     .flexCols {
         flex-direction: column;
     }
-    .project:nth-child(4n) {
-        background-color: var(--mediumLight);
-    }
-    .project:nth-child(4n+1) {
-        background-color: var(--mediumLight);
-    }
-    .project:nth-child(odd) {
-        background-color: var(--mediumDark) !important;
-    }
 }
