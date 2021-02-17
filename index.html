@@ -8,7 +8,8 @@
 
     <link rel="stylesheet" href="style/desktop.css">
     <link rel="stylesheet" href="style/mobile.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    
     <meta name="description" content="Hi, I'm William Henderson, and I'm a Software Developer from the UK.">
     <meta charset="UTF-8">
 
@@ -16,6 +17,17 @@
 </head>
 
 <body>
+    <nav>
+        <i class="fas fa-bars" onclick="toggleMenu();"></i>
+
+        <span>William Henderson</span>
+        <a onclick="scrollToAnchor('about')">About Me</a>
+        <a onclick="scrollToAnchor('technologies')">Technologies</a>
+        <a onclick="scrollToAnchor('skills')">Skills</a>
+        <a onclick="scrollToAnchor('projects')">Projects</a>
+        <a onclick="scrollToAnchor('contact')" class="bold">Contact</a>
+    </nav>
+
     <section class="hero">
         <div>
             <h1>Hi, I'm <span class="name">William Henderson</span>.<br>I'm a Software Developer.</h1>
@@ -24,6 +36,7 @@
     </section>
 
     <section class="regular" id="entryPoint">
+        <a name="about"></a>
         <div class="container">
             <img src="assets/profile_picture_compressed.jpg" alt="Photo of William Henderson">
             <h1>Welcome to my Portfolio!</h1>
@@ -32,6 +45,7 @@
     </section>
 
     <section class="regular">
+        <a name="technologies"></a>
         <div class="container">
             <h1>My Technologies</h1>
             Having been programming for the best part of a decade, I've become very proficient with a number of languages and tools, and developed a solid understanding of even more.
@@ -44,6 +58,7 @@
                         <li>HTML/CSS (since 2014)</li>
                         <li>Unity3D and C# (since 2016)</li>
                         <li>Git VCS (since 2018)</li>
+                        <li>TypeScript (since 2020)</li>
                     </ul>
                 </div>
                 <div style="flex: 1;">
@@ -52,8 +67,8 @@
                         <li>Progressive Web Apps (since 2018)</li>
                         <li>Node.js (since 2018)</li>
                         <li>Electron (since 2019)</li>
-                        <li>TypeScript (since 2020)</li>
                         <li>Nim (since 2020)</li>
+                        <li>Rust (since 2020)</li>
                     </ul>
                 </div>
             </div>
@@ -61,6 +76,7 @@
     </section>
 
     <section class="regular">
+        <a name="skills"></a>
         <div class="container">
             <h1>My Skills</h1>
             As well as my broad knowledge of many technologies, I bring several other valuable skills to the table. These include the following:
@@ -78,45 +94,42 @@
     </section>
 
     <section class="regular">
+        <a name="projects"></a>
         <div class="container">
             <h1>My Favourite Projects</h1>
             Over my many years of software development, I've worked on hundreds of projects, some lasting just days and others continuing to be supported months or even years after their creation. Here are some of my favourites!
             <div class="projectsShowcase">
-                <div class="project" onclick="openGitHub('Unlimited-YouTube-Search');">
-                    <span class="title">Unlimited YouTube Search</span>
-                    <span class="lang">Python</span>
-                    UYTS (Unlimited YouTube Search) is a small Python library I created to search YouTube without the need for its heavily restrictive Data API v3.
+                <div class="project" onclick="openGitHub('Writeboard');">
+                    <span class="title">Writeboard</span>
+                    <span class="lang">TypeScript</span>
+                    Writeboard is a simple yet stylish whiteboard app, powered by Firebase. Designed during the lockdown of 2021, it allows a teacher to easily see and interact with the boards of all their students.
                 </div>
                 <div class="project" onclick="openGitHub('TidesX');">
                     <span class="title">TidesX</span>
                     <span class="lang">JavaScript</span>
-                    TidesX is a quick and easy web app to check the tide times. It features tide times and predicted heights for 700+ locations, sun and moon information, and more, all inside a beautiful and efficient interface.
+                    TidesX is a quick and easy app to check the tide times. It features tide times and predicted heights for 700+ locations, sun and moon information, and more, all inside a beautiful and efficient interface.
+                </div>
+                <div class="project" onclick="openGitHub('Unlimited-YouTube-Search');">
+                    <span class="title">Unlimited YouTube Search</span>
+                    <span class="lang">Python</span>
+                    UYTS (Unlimited YouTube Search) is a small Python library I created to search YouTube without the need for its heavily restrictive Data API v3.
                 </div>
                 <div class="project" onclick="openGitHub('Othello');">
                     <span class="title">Othello</span>
                     <span class="lang">TypeScript</span>
                     For a CS project, I was tasked with implementing the classic game Othello. I chose to write an Electron app in TypeScript, complete with online multiplayer and a challenging AI to compete against.
                 </div>
-                <div class="project" onclick="openGitHub('EMC-Solar-Sailors');">
-                    <span class="title">Solar Sailors</span>
-                    <span class="lang">Python</span>
-                    As part of my Exeter Mathematics Certificate, I worked in a group of five developing a simulation of a solar sail going to Mars. This involved writing a basic physics engine in Python as well as team work.
-                </div>
-                <div class="project" onclick="openGitHub('FreeTube-Music');">
-                    <span class="title">FreeTube Music</span>
-                    <span class="lang">JavaScript</span>
-                    After being frustrated by YouTube Music charging money just to listen in the background, I wrote my own version built around YouTube's iframe API, which I still use to listen to music today.
-                </div>
                 <div class="project" onclick="openGitHub('PyTrains');">
                     <span class="title">PyTrains</span>
                     <span class="lang">Python / Nim</span>
-                    PyTrains is an efficient library and CLI for getting realtime UK train information. I also ported it to Nim</a> for better performance, at the cost of losing the Python library functionality.
+                    PyTrains is an efficient library and CLI for getting realtime UK train information. I also ported it to Nim for better performance, at the cost of losing the Python library functionality.
                 </div>
             </div>
         </div>
     </section>
 
     <section class="regular">
+        <a name="contact"></a>
         <div class="container">
             <h1>Contact Me</h1>
             If you want more information, feel free to contact me on any of the platforms below.
@@ -130,7 +143,7 @@
 
     <section class="footer">
         William Henderson's portfolio &bull; <a href="https://github.com/w-henderson/w-henderson.github.io">See the source code on GitHub</a>
-        <span>&copy; William Henderson 2020</span>
+        <span>&copy; William Henderson 2021</span>
     </section>
 </body>
 

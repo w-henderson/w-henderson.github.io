@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap');
 
 * {
     --darkest: #161920; /* Used exclusively for text on a light background */
@@ -28,8 +28,8 @@ section.hero span.name {
 }
 section.hero {
     color: var(--lightest);
-    /*background: linear-gradient(to top right, var(--veryDark), var(--darkest));*/
-    background-color: var(--veryDark);
+    background: linear-gradient(to left, var(--veryDark), var(--darkest));
+    /*background-color: var(--veryDark);*/
     box-sizing: border-box;
     height: 100%;
     width: 100%;
@@ -71,6 +71,52 @@ hr {
     border: none;
     background-color: var(--mediumLight);
     border-radius: 0.1vw;
+}
+
+/* Navigation section styling */
+
+nav {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    z-index: 5;
+    color: var(--lightest);
+    font-weight: 700;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    padding: 2vh;
+    font-size: max(2.5vh, 1.5vw);
+    white-space: nowrap;
+    overflow: auto hidden;
+    text-align: right;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+nav span {
+    float: left;
+}
+nav a:link, nav a:visited, nav a:active, nav a {
+    margin: 0 1vh;
+    cursor: pointer;
+    transition: color 150ms;
+    font-weight: 200;
+}
+nav a:hover {
+    color: var(--mediumLight);
+}
+nav a::after {
+    content: "\2022";
+    color: var(--lightest);
+    margin: 0 -2vh 0 1vh;
+}
+nav a:nth-last-child(1)::after {
+    content: "";
+    margin: initial;
+}
+nav i {
+    display: none !important;
+}
+nav *.bold {
+    font-weight: 600;
 }
 
 /* Regular section styling */
@@ -139,7 +185,7 @@ section.regular ul.regular li::before {
 }
 .project {
     flex: 1;
-    background-color: var(--mediumLight);
+    border: 5px solid var(--mediumLight);
     color: var(--darkest);
     border-radius: 2vh;
     margin: 2vh;
@@ -147,24 +193,29 @@ section.regular ul.regular li::before {
     padding: 2vh;
     cursor: pointer;
     transition: 100ms;
-    min-width: 250px;
+    min-width: min(300px, 100%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background-color: #eef0f259;
 }
 .project:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .project:nth-child(odd) {
-    background-color: var(--mediumDark);
+    border: 5px solid var(--mediumDark);
 }
 .project span.title {
     display: block;
-    color: white;
+    color: var(--mediumLight);
     font-weight: 800;
     font-size: 1.5em;
     margin-bottom: 1vh;
 }
+.project:nth-child(odd) span.title {
+    color: var(--mediumDark);
+}
 .project span.lang {
     font-weight: 200;
-    color: white;
+    color: var(--veryDark);
 }
 .project span.lang::after {
     content: " \2022"; /* • character unicode */
